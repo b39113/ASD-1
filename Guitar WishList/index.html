@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Template 01</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="description" content="Code Template 01." />
+    <meta name="keywords" content="code, tempalte, asd, 1311" />
+    <meta name="robots" content="index, follow" />
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="320"/>
+    <title>Code Template 01</title>
+	
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+	<link rel="stylesheet" href="css/main.css" />
+    
+        
+    <!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+    <script src="js/libs/modernizr.custom.min.js"></script>
+	
+</head>
+<body>
+	
+	<!-- HOME PAGE BEGINS -->
+	<div data-role="page" id="home">
+	
+	<!-- Logo -->
+	<a href="#addGuitar"><img src="images/logo4.jpg"></a>
+		
+		<!-- Search Begins Here -->
+        <div data-role="header" data-position="fixed" data-theme="a"></div>
+              
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search for guitars...">
+                <li><a href="#">Gibson</a></li>
+                <li><a href="#">Fender</a></li>
+                <li><a href="#">Les Paul</a></li>
+                <li><a href="#">SG</a></li>
+                <li><a href="#">Stratocaster</a></li>
+                <li><a href="#">Telecaster</a></li>
+                <li><a href="#">EMG</a></li>
+                <li><a href="#">Faded Chocolate</a></li>
+                <li><a href="#">Worn Brown</a></li>
+                <li><a href="#">Wine Red</a></li>
+                <li><a href="#">Alpine White</a></li>
+                <li><a href="#">Sunburst</a></li>
+            </ul>
+        </div>
+        <!-- Search ENDS Here -->
+        
+        <!-- Browse Options Begins Here -->
+        <div data-role="header" data-position="fixed" data-theme="a"></div>
+        <div data-role="collapsible-set">
+            <div data-role="content">
+                <ul data-role="listview">
+                    <li data-role="list-divider" class="ui-title">Browse for Guitars by...</li>
+                    <li><a href="#browse"><span class="brw">Brand</a></span></li>
+                    <li><a href="#browse"><span class="brw">Model</a></span></li>
+                    <li><a href="#browse"><span class="brw">Pickups</a></span></li>
+                    <li><a href="#browse"><span class="brw">Key Tuning</a></span></li>
+                    <li><a href="#browse"><span class="brw">Finish</a></span></li>
+                </ul>
+            </div>        
+        </div>
+        <!-- Browse Options ENDS Here-->
+		
+			
+		<!-- Links Begins -->
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#" 	  data-theme="a" data-transition="flip" data-role="button" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button">Lessons</a></li>
+					<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button">Photos</a></li>
+					<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button">About</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Links END -->
+	</div>
+
+	<!-- Home Page ENDS -->
+	
+	
+	<!-- BROWSE PAGE BEGINS HERE -->
+    <div data-role="page" id="browse">
+                        
+                        
+    <!-- Header Begins -->
+	<div data-role="header" data-id="header" data-fullscreen="true" data-theme="b">
+		<h1>Browsing for...</h1>
+		<a href="#home" data-theme="a" data-transition="flip" data-icon="home" data-iconpos="notext">Home</a>
+	</div><br/>
+	
+	<!-- Header ENDS -->
+		
+	<!-- Content Begins -->
+	<div data-role="content">
+        <ul data-role="listview">
+            <li id="noInfo"><label for ="noInfo">No information was found.</label></li>
+        </ul>        
+    </div>
+			
+	<!-- Content ENDS -->
+	
+    <!-- Links Begins -->                    
+    <div data-role="footer" data-position="fixed" data-theme="a" data-id="browse">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home"   data-theme="a" data-transition="flip" data-role="button" data-icon="home">Home</a></li>
+				<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button">Lessons</a></li>
+				<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button">Photos</a></li>
+				<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button">About</a></li>
+            </ul>
+        </div>
+    </div>
+                        
+    <div data-role="page" id="browse" data-add-back-btn="true"></div>
+    
+    <!-- Links END -->
+    
+    </div>
+    
+    <!-- Browse Page ENDS Here -->
+    
+    
+    
+    <!-- ADD ITEM PAGE -->
+    <div data-role="page" id="addGuitar">
+    
+    
+    <!-- Logo -->   
+    <a href="#home"><img src="images/logo3.jpg"></a>
+    	
+    	            
+    <!-- Guitar Add List -->
+    <div data-role="header" data-theme="b"><span class="head">ADD Guitar</span></div>                   
+    <div><br/>
+        <nav><span class="lab">
+            <a href="#" id="displayData"><span class="ccl">Display Information</span></a>
+             <a href="#addGuitar" id="addNew" style="display:none;">Add Another Guitar</a>
+        </span></nav>
+    </div><br/>
+                        
+    <label><span class="rqd"><strong>*</strong><span class="ReqI"><small>= Required Information</small></span></span></label>
+                                
+    <div data-role="content">
+                        
+        <form action="" id="guitarForm">
+        
+        	<div data-role="fieldcontain">
+                <label for="brand"><span class="label"><strong>Choose a Brand&nbsp</strong><span class="rqd"><strong>*</strong></span></span></label>
+                    <select name="brand" id="brand" data-native-menu="false" class="required">
+                        <option value="select"><-- Select An Option --></option>
+                        <option value="gibson">Gibson</option>
+                        <option value="epiphone">Epiphone</option>
+                        <option value="fender">Fender</option>
+                        <option value="dean">Dean</option>
+                        <option value="espLtd">ESP Ltd.</option>
+                        <option value="cort">Cort</option>
+                        <option value="washBurn">Washburn</option>
+                        <option value="ovation">Ovation</option>
+                    </select><br/>
+            </div>
+            
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                    <legend><span class="label"><strong>Type of Guitar</strong><span class="rqd"><strong>*</strong></span></span></legend>
+                        <input type="radio" value="Electric" name="type" id="type-1" class="required" />
+                        <label for="type-1"><small>Electric</small></label>
+                        <input type="radio" value="Bass" name="type" id="type-2" />
+                        <label for="type-2"><small>Bass</small></label>
+                        <input type="radio" value="acoustic" name="type" id="type-3" />
+                        <label for="type-3"><small>Acoustic</small></label>
+                </fieldset>
+            </div>
+            
+            <div data-role="fieldcontain">
+                <label for="model"><span class="label"><strong>Model&nbsp</strong><span class="rqd"><strong>*</strong></span></span></label>
+                <textarea id="model" name="model" class="required"></textarea><br/>
+            </div>
+            
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                    <lengend><span class="label"><strong>Pickups</strong><span class="rqd"><strong>*</strong></span></span></legend><br/>
+                    	<label class="ccl">Choose:</label>
+                        <input type="checkbox" value="EMG" name="pickUpType" id="pickUpType-1" />
+                        <label for="pickUpType-1"><small>EMG</small></label>
+                        <input type="checkbox" value="Factory" name="pickUpType" id="pickUpType-2" class="required" />
+                        <label for="pickUpType-2"><small>Factory</small></label>
+                    	<input type="checkbox" value="Other" name="pickUpType" id="pickUpType-3" />
+                        <label for="pickUpType-3"><small>Other</small></label>
+                </fieldset>
+            </div><br/>
+            
+            <div data-role="fieldcontain">
+                <label for="finish"><span class="label"><strong>Finish&nbsp</strong><span class="rqd"><strong>*</strong></span></span></label>
+                <textarea id="finish" name="finish" class="required"></textarea><br/>
+            </div>
+            
+            <div data-role="fieldcontain">
+                <label for="cost"><span class="label"><strong>Cost $$&nbsp</strong><span class="rqd"><strong>*</strong></span></span></label>
+                <textarea id="cost" name="cost" class="required"></textarea><br/>
+            </div>
+                                        
+    		<div data-role="fieldcontain">
+                <label for=rate"><span class="label"><strong>Rating</strong></span></label><br/><br/>
+                <input type="range" name="rate" id="uOfA" value="5" min="0" max="10" /><br/>
+            </div><br/>
+                                        
+                                        
+            <div data-role="fieldcontain">        
+                <label><span class="label"><strong>Date Saved To List.</strong></span></label><br/>                                        
+                <label><span class="ccl">Choose Date:<span class="rqd"><strong>*</strong></span></span></label><br/>
+                <label><input type="date" id="yourDate" name="yourDate" size="20" class="required"/></label><label for="yourDate"></label><br/>
+            </div>
+            
+                                      
+            <input type="submit" value="Update List" data-inline="true" data-mini="true" data-icon="check" data-theme="b" />&nbsp&nbsp | &nbsp<a href="#" id="clearLocal"><span class="ccl">Delete List</span></a><br/><br/>
+                 
+            <a href="#schedulingerrors" id="schedulerrorslink" data-rel="dialog" data-transition="flip">Open Errors</a>                      
+        </form>
+                        
+    </div>
+    
+    <!-- Links Begins -->
+	<div data-role="footer" data-position="fixed" data-theme="a" data-id="footer">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home"   data-theme="a" data-transition="flip" data-role="button" data-icon="home">Home</a></li>
+				<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button">Lessons</a></li>
+				<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button">Photos</a></li>
+				<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button">About</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Links END -->
+                
+        <div data-role="page" id="addGuitar" data-add-back-btn="true"></div>
+                        
+	</div>
+    
+    <div data-role="dialog" id="addGuitarerrors">
+    
+    	<div data-role="header" data-position="fixed" data-theme="e">
+    		<h1>Required Info.</h1>
+    	</div>
+    	
+    	<div data-role="content">
+    		<ul>
+    			<li></li>
+    		</ul><br/>
+    		<a href="#addGuitar" data-role="button" data-inline="true" data-mini="true" data-icon="arrow-l" data-theme="b">Back</a>
+    	</div>
+    </div>
+        
+    <!-- Add Item Page ENDS Here-->    
+	
+	
+	
+	<!-- LESSONS PAGE BEGINS HERE -->
+	<div data-role="page" id="videos">
+	
+	<!-- Logo -->
+	<a href="#addGuitar"><img src="images/logo4.jpg"></a>
+	
+		<!-- Header Begins -->
+		<div data-role="header" data-id="header" data-fullscreen="true" data-theme="b">
+			<h1>Video Lessons</h1>
+			<a href="#home" data-theme="a" data-transition="flip" data-icon="home" data-iconpos="notext">Home</a>
+		</div><br/><br/><br/>
+		<!-- Header ENDS -->
+		
+			<!-- Content Begins -->
+			<div data-role="content">
+				This is our Video Lessons page.
+				
+			</div>
+			
+			<!-- Content ENDS -->
+			
+		<!-- Links Begins -->
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home"   data-theme="a" data-transition="flip" data-role="button" data-icon="home">Home</a></li>
+					<li><a href="#" 	  data-theme="a" data-transition="pop" data-role="button" class="ui-btn-active">Lessons</a></li>
+					<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button">Photos</a></li>
+					<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button">About</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Links END -->
+			
+	</div>
+	<!-- Videos Page ENDS -->
+	
+	
+	
+	<!-- PHOTOS PAGE BEGINS -->
+	<div data-role="page" id="photos">
+	
+	<!-- Logo -->
+	<a href="#addGuitar"><img src="images/logo4.jpg"></a>
+	
+		<!-- Header Begins -->
+		<div data-role="header" data-id="header" data-theme="b">
+			<h1>Guitar Photos</h1>
+			<a href="#home" data-theme="a" data-transition="flip" data-icon="home" data-iconpos="notext">Home</a>
+		</div><br/>
+		<!-- Header ENDS -->
+		
+		<!-- Content Begins -->
+		<div class="ui-grid">
+			<div class="ui-block-a"><div class="ui-bar-c"><a href="#"><img src="images/sm_gibsons_BW.jpg"></a><br/>Les Pauls</div></div>
+			<div class="ui-block-b"><div class="ui-bar-c"><a href="#"><img src="images/sm_wallOfGuitars_BW.jpg"></a><br/>Misc. Guitars</div></div>
+			<div class="ui-block-a"><div class="ui-bar-c"><a href="#"><img src="images/sm_speedKnobs_BW.jpg"></a><br/>Get Tuned</div></div>
+			<div class="ui-block-b"><div class="ui-bar-c"><a href="#"><img src="images/sm_headStock_BW.jpg"></a><br/>Head Straight</div></div>
+		</div><br/><br/>
+			
+		<!-- Content ENDS -->
+			
+		<!-- Links Begins -->
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home"   data-theme="a" data-transition="flip" data-role="button" data-icon="home">Home</a></li>
+					<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button">Lessons</a></li>
+					<li><a href="#" 	  data-theme="a" data-transition="pop" data-role="button" class="ui-btn-active">Photos</a></li>
+					<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button">About</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Links END -->
+			
+	</div>
+	<!-- Photos Page ENDS -->
+	
+	
+	<!-- ABOUT PAGE BEGINS -->
+	<div data-role="page" id="about">
+	
+	<!-- Logo -->
+	<a href="#addGuitar"><img src="images/logo4.jpg"></a>
+	
+		<!-- Header Begins -->
+		<div data-role="header" data-id="header" data-fullscreen="true" data-theme="b">
+			<h1>About</h1>
+			<a href="#home" data-theme="a" data-transition="flip" data-icon="home" data-iconpos="notext">Home</a>
+		</div><br/><br/>
+		<!-- Header ENDS -->
+		
+		<!-- Content Begins -->
+		<div data-role="collapsible-set">
+		<div data-role="collapsible" data-collapsed="true" data-iconpos="right">
+                <h3><span class="brw">Credits</span></h3>
+                <ul data-role="listview">
+                    <p>Les Paul Icon Courtesy of <a href="http://www.flickr.com/photos/athomeinscottsdale/">-Dru Bloomfield-</a> .</p>
+                    <p>At the <a href="http://www.flickr.com/photos/14544437@N07/6191373935/in/photolist-ar7pLt-7A9gQu-eU8rNo-cfL7hC-7ArVjP-f5jnum-8qkdWz-8yFBt5-f5iVsw-cpMNUf-8fzkPc-9VgDH3-8yFBdw-8yCwiD-9VgBSm-9bEP5s-7ArVb6-8fCB3W-f5jncJ-7yYVn2-f558pR-dczDW6-8fCBPf-7J8c54-7Jc7hw-7J8bKX-7Jc8eN-7Jc3Rd-7J88oa-7J87Gn-7Jc2NL-7J85aM-7J86J6-7J86pc-7J85x6-7J87k8-7J85Pn-7Jc1Ss-7J8atR-7J8b7p-7Jc6Eu-7J892H-7Jc5cm-7J88G6-7Jc5Yh-7Jc5yY-9VdLSP-e6yUcG-f54Bei-8jkv2h-8fznUx">Creative Commons Section</a> of Flicker.com</p><br/>
+                    <p>Wall of Guitars Icon Courtesy of <a href="http://www.flickr.com/photos/fictures/">fictures</a> .</p>
+                    <p>At the <a href="http://www.flickr.com/photos/53838941@N00/6825612/in/photolist-AZ1Y-AZ22-GR3F-Kpyd-241ab-2sNR6-2t7om-bDhSq-cCEqL-cCEKF-cCEP7-cCF3b-iuQM5-jgbxR-jr6tF-kZdiP-no4D6-o1NPz-qwYJz-rSF3T-sNLjK-tn7fx-tQKuW-u1nUf-vHUgY-wbzDN-ztNDF-Dh9J9-HUHQ6-J6mXg-Jd7Sz-JgAfA-KuYQV-LdHVE-MPK5R-NSL8c-P26Gg-P2rqX-2dyfJg-2dyfJB-2dCWPj-2efrqF-2nuu4o-375w3a-38xkUG-38LPRb-3dGW9Y-3G75gw-3NachB-4gKAvP-4gPEHY">Creative Commons Section</a> of Flicker.com</p><br/>
+                    <p>Speed knobs Icon Courtesy of <a href="http://www.flickr.com/photos/samfoles/">Sam Foles</a> .</p>
+                    <p>At the <a href="http://www.flickr.com/photos/66510922@N03/6251805298/in/photolist-aws8Uw-aXuCXr-81nj7o-d9iez1-e3i2fQ-gw95Wv-amXkT5-g7GYbM-abbduY-9WPwv8-eRZ2hK-ahM8pH-a4AjAA-gTGo6m-djMyPt-8XQ8Ar-8RB4Xw-dSd9EU-8kJPFW-g6PbjN-deo3oY-djMyRk-a8rpwK-9Kj6wp-9F5Zfm-e3i2xY-8wDsuX-8wDtFn-8wDth6-8wDsXn-f5jksq-9VdLGz">Creative Commons Section</a> of Flicker.com</p><br/>
+                    <p>Head Stock Icon Courtesy of <a href="http://www.flickr.com/photos/dazjohnson/">Darren Johnson</a> .</p>
+                    <p>At the <a href="http://www.flickr.com/photos/70140013@N07/7074956317/in/photolist-bMc12t-cJSoXQ-97C5sH-97FcmU-97C5rr-97Fcmh-97C5qx-e8qfF8-97Fcod-97FchA-97C67a-7zM2yw-e8qg3v-97Fcnu-97C68a-97C61Z-97C5ZT-a8iKXv-97FcdU-97FcpL-97C636-cryJCb-aXuycV-97C5Yp-97C5Xn-97C5Z4-8CJWPX-98v79H-7WycRK-8oth8R-dsAD3y-e7ebYx-byZtxm-97FbHY-97Fc3b-9uSE5F-fa8VA4-8JB9rH-e8qgix-bnsUQR-8KFZjy-gh7TFv-9qSeM6-fbScSc-dxQz6b-abbbF1-abbahj-abbe1N-f2uGkX-an1buC-aSpYie">Creative Commons Section</a> of Flicker.com</p><br/>
+                    <p>All other images courtesy of those who wish to</p>
+                    <p>remain anonymous.</p><br/>
+                </ul>
+            </div>
+		
+			<div data-role="collapsible" data-collapsed="true" data-iconpos="right">
+                <h3><span class="brw">Developer</span></h3>
+                <ul data-role="listview"><br/>
+                    <p>Copyright © 2013 - John Mark Henry</p></br/>
+                    <p>Mark Henry is currently a student at</p>
+                    <p>Full Sail University. And is a beginning</p>
+                    <p>application developer.</p><br/>
+                </ul>
+            </div>
+            
+            <div data-role="collapsible" data-collapsed="true" data-iconpos="right">
+                <h3><span class="brw">gh-pages</span></h3>
+                <ul data-role="listview"><br/>
+                    <p><a href="https://github.com/g27259/ASD/tree/gh-pages">Repository</a></p><br/>
+                    <p>Live Link</p><br/>
+                </ul>
+            </div>
+				
+		</div>
+			
+		<!-- Content ENDS -->
+			
+		<!-- Links Begins -->
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home"   data-theme="a" data-transition="flip" data-role="button" data-icon="home">Home</a></li>
+					<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button">Lessons</a></li>
+					<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button">Photos</a></li>
+					<li><a href="#" 	  data-theme="a" data-transition="pop" data-role="button" class="ui-btn-active">About</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Links END -->
+			
+	</div>
+	<!-- About Page ENDS -->
+	
+	
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/libs/additional-methods.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+</body>
+</html>
