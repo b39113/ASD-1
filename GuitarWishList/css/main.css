@@ -17,7 +17,7 @@
 	color: #ff9933;
 	font-size: 10px;
 	text-shadow: -1px 0px #000000;
-	padding: 2.5em;
+	padding: 1em;
 }
 
 .rqd {
@@ -41,7 +41,6 @@
 .brw {
 	color: #000000;
 	text-shadow: -1px 0px #666666;
-	padding 0.5em;
 }
 
 .back{
@@ -90,5 +89,15 @@
 
 .error {
 	color:#cc0000;
+	text-shadow: -1px 1px #000000;
+}
+
+#addGuitarerrorslink {
+	display: none;
+}
+
+#addGuitarerrors .ui-title {
+	color: #cc0000;
+	font-size: 1em;
 	text-shadow: -1px 1px #000000;
 }

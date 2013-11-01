@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Template 01</title>
+	<title>Guitar Wish List</title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<meta name="description" content="Code Template 01." />
@@ -10,7 +10,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="HandheldFriendly" content="true"/>
     <meta name="MobileOptimized" content="320"/>
-    <title>Code Template 01</title>
+    <title>Guitar Wish List</title>
 	
 	
 	<!-- StyleSheets under here -->
@@ -60,8 +60,8 @@
                     <li><a href="#browse"><span class="brw">Brand</a></span></li>
                     <li><a href="#browse"><span class="brw">Model</a></span></li>
                     <li><a href="#browse"><span class="brw">Pickups</a></span></li>
-                    <li><a href="#browse"><span class="brw">Key Tuning</a></span></li>
                     <li><a href="#browse"><span class="brw">Finish</a></span></li>
+                    <li><a href="#browse"><span class="brw">Cost</a></span></li>
                 </ul>
             </div>        
         </div>
@@ -73,9 +73,9 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#" 	  data-theme="a" data-transition="flip" data-role="button" data-icon="home" class="ui-btn-active">Home</a></li>
-					<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button">Lessons</a></li>
-					<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button">Photos</a></li>
-					<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button">About</a></li>
+					<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button" data-icon="star">Lessons</a></li>
+					<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button" data-icon="grid">Photos</a></li>
+					<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button" data-icon="info">About</a></li>
 				</ul>
 			</div>
 		</div>
@@ -111,9 +111,9 @@
         <div data-role="navbar">
             <ul>
                 <li><a href="#home"   data-theme="a" data-transition="flip" data-role="button" data-icon="home">Home</a></li>
-				<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button">Lessons</a></li>
-				<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button">Photos</a></li>
-				<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button">About</a></li>
+				<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button" data-icon="star">Lessons</a></li>
+				<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button" data-icon="grid">Photos</a></li>
+				<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button" data-icon="info">About</a></li>
             </ul>
         </div>
     </div>
@@ -140,7 +140,7 @@
     <div data-role="header" data-theme="b"><span class="head">ADD Guitar</span></div>                   
     <div><br/>
         <nav><span class="lab">
-            <a href="#" id="displayData"><span class="ccl">Display Information</span></a>
+             <a href="#" id="displayData"><span class="ccl">Display Information</span></a>
              <a href="#addGuitar" id="addNew" style="display:none;">Add Another Guitar</a>
         </span></nav>
     </div><br/>
@@ -155,26 +155,24 @@
                 <label for="brand"><span class="label"><strong>Choose a Brand&nbsp</strong><span class="rqd"><strong>*</strong></span></span></label>
                     <select name="brand" id="brand" data-native-menu="false" class="required">
                         <option value="select"><-- Select An Option --></option>
-                        <option value="gibson">Gibson</option>
-                        <option value="epiphone">Epiphone</option>
-                        <option value="fender">Fender</option>
-                        <option value="dean">Dean</option>
-                        <option value="espLtd">ESP Ltd.</option>
-                        <option value="cort">Cort</option>
-                        <option value="washBurn">Washburn</option>
-                        <option value="ovation">Ovation</option>
+                        <option value="Gibson">Gibson</option>
+                        <option value="Epiphone">Epiphone</option>
+                        <option value="Fender">Fender</option>
+                        <option value="Dean">Dean</option>
+                        <option value="ESP Ltd">ESP Ltd.</option>
+                        <option value="Cort">Cort</option>
+                        <option value="Washburn">Washburn</option>
+                        <option value="Ovation">Ovation</option>
                     </select><br/>
             </div>
             
             <div data-role="fieldcontain">
                 <fieldset data-role="controlgroup">
                     <legend><span class="label"><strong>Type of Guitar</strong><span class="rqd"><strong>*</strong></span></span></legend>
-                        <input type="radio" value="Electric" name="type" id="type-1" class="required" />
-                        <label for="type-1"><small>Electric</small></label>
-                        <input type="radio" value="Bass" name="type" id="type-2" />
-                        <label for="type-2"><small>Bass</small></label>
-                        <input type="radio" value="acoustic" name="type" id="type-3" />
-                        <label for="type-3"><small>Acoustic</small></label>
+                        <input type="radio" value="Electric" name="guitarType" id="guitarType-1" class="required" />
+                        <label for="guitarType-1"><small>Electric</small></label>
+                        <input type="radio" value="Acoustic" name="guitarType" id="guitarType-2" />
+                        <label for="guitarType-2"><small>Acoustic</small></label>
                 </fieldset>
             </div>
             
@@ -184,15 +182,28 @@
             </div>
             
             <div data-role="fieldcontain">
+                <label for="strings"><span class="label"><strong>Number of Strings&nbsp</strong><span class="rqd"><strong>*</strong></span></span></label>
+                    <select name="strings" id="strings" data-native-menu="false" class="required">
+                        <option value="select"><-- Select An Option --></option>
+                        <option value="6 String">6 String</option>
+                        <option value="7 String">7 String</option>
+                        <option value="4 String Bass">4 String Bass</option>
+                        <option value="5 String Bass">5 String Bass</option>
+                        <option value="6 String Acoustic">6 String Acoustic</option>
+                        <option value="12 String Acoustic">12 String Acoustic</option>
+                    </select><br/>
+            </div>
+            
+            <div data-role="fieldcontain">
                 <fieldset data-role="controlgroup">
                     <lengend><span class="label"><strong>Pickups</strong><span class="rqd"><strong>*</strong></span></span></legend><br/>
                     	<label class="ccl">Choose:</label>
-                        <input type="checkbox" value="EMG" name="pickUpType" id="pickUpType-1" />
-                        <label for="pickUpType-1"><small>EMG</small></label>
-                        <input type="checkbox" value="Factory" name="pickUpType" id="pickUpType-2" class="required" />
-                        <label for="pickUpType-2"><small>Factory</small></label>
-                    	<input type="checkbox" value="Other" name="pickUpType" id="pickUpType-3" />
-                        <label for="pickUpType-3"><small>Other</small></label>
+                        <input type="checkbox" value="EMG" name="pickupType" id="pickupType-1" class="required" />
+                        <label for="pickupType-1"><small>EMG</small></label>
+                        <input type="checkbox" value="Factory" name="pickupType" id="pickupType-2" />
+                        <label for="pickupType-2"><small>Factory</small></label>
+                    	<input type="checkbox" value="Other" name="pickupType" id="pickupType-3" />
+                        <label for="pickupType-3"><small>Other</small></label>
                 </fieldset>
             </div><br/>
             
@@ -202,26 +213,27 @@
             </div>
             
             <div data-role="fieldcontain">
-                <label for="cost"><span class="label"><strong>Cost $$&nbsp</strong><span class="rqd"><strong>*</strong></span></span></label>
-                <textarea id="cost" name="cost" class="required"></textarea><br/>
+                <label for="cost"><span class="label"><strong>Cost $&nbsp</strong><span class="rqd"><strong>*</strong></span></span></label>
+                <textarea id="cost" name="cost" placeholder="Ex. 100.00" class="required number"></textarea><br/>
             </div>
                                         
     		<div data-role="fieldcontain">
                 <label for=rate"><span class="label"><strong>Rating</strong></span></label><br/><br/>
-                <input type="range" name="rate" id="uOfA" value="5" min="0" max="10" /><br/>
+                <input type="range" name="rate" id="rate" value="5" min="0" max="10" class="required" /><br/>
             </div><br/>
                                         
                                         
             <div data-role="fieldcontain">        
                 <label><span class="label"><strong>Date Saved To List.</strong></span></label><br/>                                        
                 <label><span class="ccl">Choose Date:<span class="rqd"><strong>*</strong></span></span></label><br/>
-                <label><input type="date" id="yourDate" name="yourDate" size="20" class="required"/></label><label for="yourDate"></label><br/>
+                <label><input type="date" id="date" name="date" size="20" class="required"/></label><label for="date"></label><br/>
             </div>
             
                                       
-            <input type="submit" value="Update List" data-inline="true" data-mini="true" data-icon="check" data-theme="b" />&nbsp&nbsp | &nbsp<a href="#" id="clearLocal"><span class="ccl">Delete List</span></a><br/><br/>
-                 
-            <a href="#schedulingerrors" id="schedulerrorslink" data-rel="dialog" data-transition="flip">Open Errors</a>                      
+            <input type="submit" value="Update List" data-inline="true" data-mini="true" data-icon="check" data-theme="b" />&nbsp&nbsp | &nbsp<a href="#" id="clearData"><span class="ccl">Delete List</span></a><br/><br/>
+            
+            <a href="#addGuitarerrors" id="addGuitarerrorslink" data-rel="dialog" data-transition="pop">Open Errors</a>
+                                     
         </form>
                         
     </div>
@@ -231,21 +243,25 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#home"   data-theme="a" data-transition="flip" data-role="button" data-icon="home">Home</a></li>
-				<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button">Lessons</a></li>
-				<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button">Photos</a></li>
-				<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button">About</a></li>
+				<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button" data-icon="star">Lessons</a></li>
+				<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button" data-icon="grid">Photos</a></li>
+				<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button" data-icon="info">About</a></li>
 			</ul>
 		</div>
 	</div>
 	<!-- Links END -->
-                
+        
         <div data-role="page" id="addGuitar" data-add-back-btn="true"></div>
                         
 	</div>
+	
+	<!-- Add Item Page ENDS Here --> 
     
+    
+    <!-- Error Dialog Page Begins Here --> 
     <div data-role="dialog" id="addGuitarerrors">
     
-    	<div data-role="header" data-position="fixed" data-theme="e">
+    	<div data-role="header" data-position="fixed" data-theme="b">
     		<h1>Required Info.</h1>
     	</div>
     	
@@ -257,7 +273,7 @@
     	</div>
     </div>
         
-    <!-- Add Item Page ENDS Here-->    
+    <!-- Error Dialog Page ENDS Here -->    
 	
 	
 	
@@ -287,9 +303,9 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home"   data-theme="a" data-transition="flip" data-role="button" data-icon="home">Home</a></li>
-					<li><a href="#" 	  data-theme="a" data-transition="pop" data-role="button" class="ui-btn-active">Lessons</a></li>
-					<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button">Photos</a></li>
-					<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button">About</a></li>
+					<li><a href="#" 	  data-theme="a" data-transition="pop" data-role="button" data-icon="star" class="ui-btn-active">Lessons</a></li>
+					<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button" data-icon="grid">Photos</a></li>
+					<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button" data-icon="info">About</a></li>
 				</ul>
 			</div>
 		</div>
@@ -328,9 +344,9 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home"   data-theme="a" data-transition="flip" data-role="button" data-icon="home">Home</a></li>
-					<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button">Lessons</a></li>
-					<li><a href="#" 	  data-theme="a" data-transition="pop" data-role="button" class="ui-btn-active">Photos</a></li>
-					<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button">About</a></li>
+					<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button" data-icon="star">Lessons</a></li>
+					<li><a href="#" 	  data-theme="a" data-transition="pop" data-role="button" data-icon="grid" class="ui-btn-active">Photos</a></li>
+					<li><a href="#about"  data-theme="a" data-transition="pop" data-role="button" data-icon="info">About</a></li>
 				</ul>
 			</div>
 		</div>
@@ -385,7 +401,7 @@
                 <h3><span class="brw">gh-pages</span></h3>
                 <ul data-role="listview"><br/>
                     <p><a href="https://github.com/g27259/ASD/tree/gh-pages">Repository</a></p><br/>
-                    <p>Live Link</p><br/>
+                    <p><a href="http://g27259.github.io/ASD/GuitarWishList/index.html">Live Link</a></p><br/>
                 </ul>
             </div>
 				
@@ -398,9 +414,9 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home"   data-theme="a" data-transition="flip" data-role="button" data-icon="home">Home</a></li>
-					<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button">Lessons</a></li>
-					<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button">Photos</a></li>
-					<li><a href="#" 	  data-theme="a" data-transition="pop" data-role="button" class="ui-btn-active">About</a></li>
+					<li><a href="#videos" data-theme="a" data-transition="pop" data-role="button" data-icon="star">Lessons</a></li>
+					<li><a href="#photos" data-theme="a" data-transition="pop" data-role="button" data-icon="grid">Photos</a></li>
+					<li><a href="#" 	  data-theme="a" data-transition="pop" data-role="button" data-icon="info" class="ui-btn-active">About</a></li>
 				</ul>
 			</div>
 		</div>
