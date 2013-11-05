@@ -132,7 +132,7 @@
     <div data-role="page" id="addGuitar">
     
     
-    <!-- Logo -->   
+    <!-- Logo -->  
     <a href="#home"><img src="images/logo3.jpg"></a>
     	
     	            
@@ -159,7 +159,7 @@
                         <option value="Epiphone">Epiphone</option>
                         <option value="Fender">Fender</option>
                         <option value="Dean">Dean</option>
-                        <option value="ESP Ltd">ESP Ltd.</option>
+                        <option value="ESP_Ltd">ESP Ltd.</option>
                         <option value="Cort">Cort</option>
                         <option value="Washburn">Washburn</option>
                         <option value="Ovation">Ovation</option>
@@ -232,6 +232,10 @@
                                       
             <input type="submit" value="Update List" data-inline="true" data-mini="true" data-icon="check" data-theme="b" />&nbsp&nbsp | &nbsp<a href="#" id="clearData"><span class="ccl">Delete List</span></a><br/><br/>
             
+            <div id="edit-item-button" style="display: none;">
+                <input type="button" id="edit-item" value="Edit Item" />
+            </div>
+            
             <a href="#addGuitarerrors" id="addGuitarerrorslink" data-rel="dialog" data-transition="pop">Open Errors</a>
                                      
         </form>
@@ -277,26 +281,175 @@
 	
 	
 	
-	<!-- LESSONS PAGE BEGINS HERE -->
+	<!-- VIDEO LESSONS PAGE BEGINS HERE -->
 	<div data-role="page" id="videos">
 	
 	<!-- Logo -->
 	<a href="#addGuitar"><img src="images/logo4.jpg"></a>
 	
-		<!-- Header Begins -->
-		<div data-role="header" data-id="header" data-fullscreen="true" data-theme="b">
-			<h1>Video Lessons</h1>
-			<a href="#home" data-theme="a" data-transition="flip" data-icon="home" data-iconpos="notext">Home</a>
-		</div><br/><br/><br/>
-		<!-- Header ENDS -->
+	<!-- Header Begins -->
+	<div data-role="header" data-id="header" data-fullscreen="true" data-theme="b">
+		<h1>Video Lessons</h1>
+		<a href="#home" data-theme="a" data-transition="flip" data-icon="home" data-iconpos="notext">Home</a>
+	</div><br/>
+	<!-- Header ENDS -->
 		
-			<!-- Content Begins -->
-			<div data-role="content">
-				This is our Video Lessons page.
+		<!-- Content Begins Here -->
+		<div data-role="content" data-filter="true">
+		
+			<ul data-role="listview">
+		
+	
+				<!-- Guitar Nested List Views Begin Here. -->
+				<li>
+					<img src="images/strat150.jpg" alt="" class="videos" />
+					<h2>Guitar Lessons</h2>
+					<p>Learn how to be a rock star.</p><br/>
+					<ul data-role="listview" data-filter="true"><br/>					
+						<li data-role="list-divider" class="divider">Video Lessons</li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=VQKU9WJG7BY">
+							<h2>How To Play Crazy Train</h2>
+							<p>Center Stage Guitar</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=GUpwi3AQCH4">
+							<h2>How To Build Guitar Speed</h2>
+							<p>Tom Hess Music</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=GUpwi3AQCH4">
+							<h2>How To Build Guitar Speed</h2>
+							<p>Tom Hess Music</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=bovmfJ--Ed8">
+							<h2>Lead Guitar Solos</h2>
+							<p>How To Make Them Sound Awesome</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=4f08oJKMCS4">
+							<h2>How To Play</h2>
+							<p>Pantera: Walk</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=cPgwph4zceQ">
+							<h2>Quick Licks w/Jimmy Brown</h2>
+							<p>How To Play Hanger 18</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=KuCckFx_Z04">
+							<h2>Quick Licks w/Matt Scharfglass</h2>
+							<p>How To Play Metallica - Creeping Death</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=oHivbPB_jkY">
+							<h2>Fun Tapping Exercise</h2>
+							<p>From JamPlayDotCom</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=wo3tzkZLsWs">
+							<h2>Heavy Metal Fretboard Tapping</h2>
+							<p>By Bobby Crispy</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=V81qm8IrRQA">
+							<h2>Tapping Arpeggios</h2>
+							<p>Advanced Guitar Lesson</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=axObDv3ZfDw">
+							<h2>Music Theory</h2>
+							<p>Harmony and Diatonic Function</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=VMLYgwnG61E&feature=c4-overview&list=UUqHkFMEmOPFO3ahcrrBAj4w">
+							<h2>String Theory w/Jimmy Brown</h2>
+							<p>Jazz Prgressions / Bossa Nova Grooves</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=PF3nJs6gO1Q">
+							<h2>String Theory w/Jimmy Brown</h2>
+							<p>Santana, Moore & Brecker, Part 1</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=iSD4peMD9f0">
+							<h2>String Theory w/Jimmy Brown</h2>
+							<p>Santana, Moore & Brecker, Part 2</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=yEzErvbV4GU">
+							<h2>String Theory w/Jimmy Brown</h2>
+							<p>Creating a Rolling Melody</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=wjVuAqWunus">
+							<h2>String Theory w/Jimmy Brown</h2>
+							<p>Melodic Minor Domination Part 1</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=HpmPycgKtjE">
+							<h2>String Theory w/Jimmy Brown</h2>
+							<p>Melodic Minor Domination Part 2</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=gMLAE7re76c&feature=c4-overview&list=UUqHkFMEmOPFO3ahcrrBAj4w">
+							<h2>Metal For Life w/Metal Mike</h2>
+							<p>Creating Powerful Licks from Two-String Ideas</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=JglSCdofIq4">
+							<h2>Metal for Life w/Metal Mike</h2>
+							<p>Phrygian's Evil Sister Scale: Phrygian Dominant</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=a6b-T_tNwtc">
+							<h2>Metal for Life w/Metal Mike</h2>
+							<p>The Dark Sound of the Phrygian Mode's</p>
+							<p>"Flatted" Intervals</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=pmv-2VhJPtA">
+							<h2>Metal for Life w/Metal Mike</h2>
+							<p>Five Essential Minor Mode Scale Patterns</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=6NMenSlTDt8">
+							<h2>Metal for Life w/Metal Mike</h2>
+							<p>Pentatonic Trailblazing</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=R1ylPgcyW-A">
+							<h2>Metal for Life w/Metal Mike</h2>
+							<p>Mega-Metal Licks in the Style of Metallica,</p>
+							<p>Testament and Pantera</p></a></li><br/>
+						<a href="#videos" data-role="button" data-theme="b" data-inline="true" data-transition="flip" data-icon="back"><span class="back">Back</span></a>
+					</ul>
+				</li><br/>
+
+				<!-- Guitar Nested List Views END Here. -->
 				
-			</div>
+				
+				<!-- Get Tuned Nested List Views Begin Here. -->
+				<li>
+					<img src="images/headStock.jpg" alt="" class="videos" />
+					<h2>Get Tuned</h2>
+					<p>Guitar Supplies</p><br/>
+					<ul data-role="listview" data-filter="true">
+						
+						<a href="#videos" data-role="button" data-theme="b" data-inline="true" data-transition="flip" data-icon="back"><span class="back">Back</span></a>
+					</ul>
+				</li><br/>
+				<!-- Get Tuned Nested List Views END Here. -->
+				
+				
+				<!-- MISC. Nested List Views Begin Here. -->
+				<li>
+					<img src="images/goldKnobs.jpg" alt="" class="videos" />
+					<h2>Misc. Videos</h2>
+					<p>With practice, this could be you.</p><br/>
+					<ul data-role="listview" data-filter="true"><br/>
+						<li data-role="list-divider" class="divider">Misc. Videos</li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=hp7_RyyEPjk">
+							<h2>Godspeed Hellbound</h2>
+							<p>by Gaku</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=RLBPOQBCHqg">
+							<h2>Ozzy's - Over The Mountain</h2>
+							<p>by Gaku</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=V2MyM77DDhw">
+							<h2>Led Zeppelin - Black Dog</h2>
+							<p>by Gaku</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=pIGYBQou4b0">
+							<h2>Black Sabbath - Paranoid</h2>
+							<p>by Gaku</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=ZjCmaatF7hs">
+							<h2>Pantera - Regular People</h2>
+							<p>by Gaku</p></a></li>				
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=qBK6ZGhqmfs">
+							<h2>Black Sabbath - Into The Void</h2>
+							<p>by Gaku</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=4brhOyUeQIE">
+							<h2>Pantera - I'm Broken</h2>
+							<p>by Gaku</p></a></li>	
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=GmrHUGFN2n4">
+							<h2>Funeral Bell - Black Label Society</h2>
+							<p>by Pemametal</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=WiJswuBSx_A">
+							<h2>Losin' Your Mind - Pride & Glory</h2>
+							<p>by Pemametal</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=LyvpMtNVpmg&feature=c4-overview&list=UU0uuepka55SLp01522ssy2w">
+							<h2>Suicide Messiah (Alternate Mix)</h2>
+							<p>Black Label Society</p>
+							<p>by Pemametal</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=ooNg2v0pj9c">
+							<h2>Megadeath's - Hanger 18</h2>
+							<p>by CorruptorMusics</p></a></li>
+						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=YegApdf2j4g">Drummer - Meytall</a></li>
+						<a href="#videos" data-role="button" data-theme="b" data-inline="true" data-transition="flip" data-icon="back"><span class="back">Back</span></a>
+					</ul>
+				</li><br/>
+				<!-- MISC. Nested List Views END Here. -->
+
+			</ul>
 			
-			<!-- Content ENDS -->
+		
+		</div>
+		<!-- Content ENDS Here -->
 			
 		<!-- Links Begins -->
 		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footer">
@@ -312,7 +465,7 @@
 		<!-- Links END -->
 			
 	</div>
-	<!-- Videos Page ENDS -->
+	<!-- VIDEO LESSONS PAGE ENDS HERE -->
 	
 	
 	
@@ -381,8 +534,12 @@
                     <p>Speed knobs Icon Courtesy of <a href="http://www.flickr.com/photos/samfoles/">Sam Foles</a> .</p>
                     <p>At the <a href="http://www.flickr.com/photos/66510922@N03/6251805298/in/photolist-aws8Uw-aXuCXr-81nj7o-d9iez1-e3i2fQ-gw95Wv-amXkT5-g7GYbM-abbduY-9WPwv8-eRZ2hK-ahM8pH-a4AjAA-gTGo6m-djMyPt-8XQ8Ar-8RB4Xw-dSd9EU-8kJPFW-g6PbjN-deo3oY-djMyRk-a8rpwK-9Kj6wp-9F5Zfm-e3i2xY-8wDsuX-8wDtFn-8wDth6-8wDsXn-f5jksq-9VdLGz">Creative Commons Section</a> of Flicker.com</p><br/>
                     <p>Head Stock Icon Courtesy of <a href="http://www.flickr.com/photos/dazjohnson/">Darren Johnson</a> .</p>
-                    <p>At the <a href="http://www.flickr.com/photos/70140013@N07/7074956317/in/photolist-bMc12t-cJSoXQ-97C5sH-97FcmU-97C5rr-97Fcmh-97C5qx-e8qfF8-97Fcod-97FchA-97C67a-7zM2yw-e8qg3v-97Fcnu-97C68a-97C61Z-97C5ZT-a8iKXv-97FcdU-97FcpL-97C636-cryJCb-aXuycV-97C5Yp-97C5Xn-97C5Z4-8CJWPX-98v79H-7WycRK-8oth8R-dsAD3y-e7ebYx-byZtxm-97FbHY-97Fc3b-9uSE5F-fa8VA4-8JB9rH-e8qgix-bnsUQR-8KFZjy-gh7TFv-9qSeM6-fbScSc-dxQz6b-abbbF1-abbahj-abbe1N-f2uGkX-an1buC-aSpYie">Creative Commons Section</a> of Flicker.com</p><br/>
-                    <p>All other images courtesy of those who wish to</p>
+                	<p>At the <a href="http://www.flickr.com/photos/70140013@N07/7074956317/in/photolist-bMc12t-cJSoXQ-97C5sH-97FcmU-97C5rr-97Fcmh-97C5qx-e8qfF8-97Fcod-97FchA-97C67a-7zM2yw-e8qg3v-97Fcnu-97C68a-97C61Z-97C5ZT-a8iKXv-97FcdU-97FcpL-97C636-cryJCb-aXuycV-97C5Yp-97C5Xn-97C5Z4-8CJWPX-98v79H-7WycRK-8oth8R-dsAD3y-e7ebYx-byZtxm-97FbHY-97Fc3b-9uSE5F-fa8VA4-8JB9rH-e8qgix-bnsUQR-8KFZjy-gh7TFv-9qSeM6-fbScSc-dxQz6b-abbbF1-abbahj-abbe1N-f2uGkX-an1buC-aSpYie">Creative Commons Section</a> of Flicker.com</p><br/>
+                    <p>Strat Icon Courtesy of <a href="http://www.flickr.com/photos/49330484@N04/">X2N</a> .</p>
+                    <p>At the <a href="http://www.flickr.com/photos/49330484@N04/5892242615/in/photolist-9YFhrV-d5m1pE-f6R3VW-9VdLSP-a5hzg4-9fZiqY-aE9EYb-9wuaK3-85rg68-dpThF7-cvQ8xE-8CPCJt-e6QsNi-9aLqhX-dQQsR4-85re72-aws7hQ-7zo6sK-7EKTSJ-83U698-83U6uH-boWWRP-7ZmEQQ-81nj7o-e1VzDF-8MFFXy-d9iez1-eYUHXq-eYHmjD-eYHohg-eYHrDn-eYUGPC-eYHgQM-eYHrqk-eYULAb-eYUKBQ-eYUHNA-eYHkxK-eYHpKz-eYHp5Z-eYHhBX-eYUNih-eYUMMG-eYUJVL-eYUFZW-eYHirZ-eYHphp-89fMMK-bi18Rn-83XbRA-83U63R">Creative Commons Section</a> of Flicker.com</p><br/>
+                	<p>Gold Knobs Icon Courtesy of <a href="http://www.flickr.com/photos/goincase/Strat">Incase</a> .</p>
+                    <p>At the <a href="http://www.flickr.com/photos/62021300@N00/5036992322/in/photolist-8F6Ukd-7CGG4o-bfGtmr-a8doZg-bUckZE-dGrWU1-dKsjNy-98hSey-a1tLGY-96hvMF-fkSDhJ-bz2U4g-bvpQ7t-bhH4Pv-csjuQ3-crMPpA-art3CN-8MzAiS-9Mf9TJ-aqt2mE-bup2Uj-eUSANW-9S1W91-988eSJ-dQn7JD-9f3CWj-9SkTMR-7NTA3z-bmvZfi-bmvZan">Creative Commons Section</a> of Flicker.com</p><br/>
+                	<p>All other images courtesy of those who wish to</p>
                     <p>remain anonymous.</p><br/>
                 </ul>
             </div>

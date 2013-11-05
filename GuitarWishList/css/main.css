@@ -38,22 +38,40 @@
 	padding: 0.5em;
 }
 
-.brw {
-	color: #000000;
-	text-shadow: -1px 0px #666666;
-}
-
-.back{
+.back2 {
 	background-color: #000000;
-	background:url(bassBack.jpg);
+	background:url(bassback.jpg);
 	background-size:100% 100%;
 	background-repeat:no-repeat;
 }
 
+.back {
+	color: #ff9933;
+	text-shadow: -1px 1px #000000;
+}
+
+.brw {
+	color: #000000;
+	text-shadow: -1px 0px #999999;
+}
+
+.divider {
+	color: #ff9933;
+	text-shadow: -1px 1px #000000;
+	text-align: center;
+}
+
 .head {
-	color: #cccccc;
+	color: #ff9933;
 	text-shadow: -1px 1px #000000;
 	padding: 7em;
+}
+
+.ui-mobile-viewport {
+	background: url(../images/bassback.jpg);
+    background-position: center;
+    background-color: #000000;
+    background-repeat: no-repeat;
 }
 
 .ui-page.ui-body-c{
@@ -82,8 +100,12 @@
 	padding: 1em;
 }
 
+.videos {
+	padding: 5px 5px;
+}
+
 .ui-title {
-	color: #cccccc;
+	color: #ff9933;
 	text-shadow: -1px 1px #000000;
 }
 
@@ -101,3 +123,8 @@
 	font-size: 1em;
 	text-shadow: -1px 1px #000000;
 }
+
+#editItem { 
+	display: none; 
+}
+
