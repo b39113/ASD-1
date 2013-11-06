@@ -70,10 +70,11 @@ $('#addGuitar').on('pageinit', function(){
 		}
 
 /*
+//(ERROR) - This gives back an error of "Uncaught SyntaxError: Unexpected identifier 	main.js:85"
 //JSON Data
 $('#json').on('click', function(){
 	$.ajax({
-		url			: "js/data.json",
+		url			: "xhr/data.json",
 		type		: "GET",
 		dataType	: "json",
 		success		: function(data, status) {
@@ -87,12 +88,14 @@ $('#json').on('click', function(){
 	});
 
 })
+*/
 
-
+/*
+//(ERROR) - This gives back an error of "Uncaught SyntaxError: Unexpected token ; 	main.js:178"
 //XML Data
 $('#xml').on('click', function(){
     $.ajax({
-        url: 	  'js/data.xml',
+        url: 	  'xhr/data.xml',
         type: 	  'GET',
         dataType: 'xml',
         success: function(xml){
@@ -103,8 +106,45 @@ $('#xml').on('click', function(){
         	console.log("Brand:", item.find("brand")).appendTo('#xmlDisplay');
                 
 });
+*/
 
-*/	
+
+/*	//(ERROR) - OPTIONS file:///Users/Mark/Desktop/ASD/GuitarWishList/xhr/list.php Origin null is not allowed by Access-Control-Allow-Origin. jquery.js:5446
+	//(ERROR) -	XMLHttpRequest cannot load file:///Users/Mark/Desktop/ASD/GuitarWishList/xhr/list.php. Origin null is not allowed by Access-Control-Allow-Origin. index.html?brand=Gibson&guitarType=Electric&model=sdf&strings=6+String&pickupType=EMG&finish=sdf&co…:1
+$(function(){
+
+	$('#phpDisplay').empty();
+	$.ajax({
+		url: 	  'xhr/list.php',
+		type: 	  'GET',
+		dataType: 'json',
+		success: function(response){
+			for(var i=0, j=response.languages.length; i<j; i++){
+				var lang = response.languages[i];
+				$(''+
+					'<div class="language">'+
+						'<h2>'+ lang.name +'</h2>'+
+						'<p>'+ lang.description +'</p>'+
+						'<p>'+ lang.version +'</p>'+
+					'</div>'				
+				).appendTo('#phpDisplay');
+			};
+		}
+	});
+});
+*/
+
+/*  //(ERROR) - OPTIONS file:///Users/Mark/Desktop/ASD/GuitarWishList/data.json  jquery.js:5446
+$.ajax({
+	url			: "data.json",
+	type		: "GET",
+	dataType	:"json",
+	success		: function(data, status) {
+		console.log(status, data);
+	}
+});
+*/
+
 
 	//This clears all of the data.
     function clearLocal(){
