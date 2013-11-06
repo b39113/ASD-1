@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guitarType>
+        <guitarType>
+                <brand>Epiphone</brand>
+                <type>Electric</type>
+                <model>Thunderbird IV</model>
+                <strings>4 String Bass</strings>
+                <pickups>EMG</pickups>
+                <finish>Vintage Sunburst</finish>
+                <cost>$399.00</cost>
+                <rating>8</rating>
+                <dateSaved>10/3/2013</dateSaved>
+        </guitarType>
+    	<guitarType>
+                <brand>Cort</brand>
+                <type>Electric</type>
+                <model>Gene Simmons Punisher 2</model>
+                <strings>4 String Bass</strings>
+                <pickups>EMG</pickups>
+                <finish>Black</finish>
+                <cost>$560.00</cost>
+                <rating>9</rating>
+                <dateSaved>10/16/2013</dateSaved>
+        </guitarType>
+        <guitarType>
+                <brand>Hofner</brand>
+                <type>Electric</type>
+                <model>H500/1-CT Violin Bass</model>
+                <strings>4 String Bass</strings>
+                <pickups>Factory</pickups>
+                <finish>Sunburst</finish>
+                <cost>$770.00</cost>
+                <rating>8</rating>
+                <dateSaved>10/19/2013</dateSaved>
+        </guitarType>
+        <guitarType>
+                <brand>Gibson</brand>
+                <type>Electric</type>
+                <model>SG Reissue</model>
+                <strings>4 String Bass</strings>
+                <pickups>Factory</pickups>
+                <finish>Sunburst</finish>
+                <cost>$1,399.00</cost>
+                <rating>9</rating>
+                <dateSaved>10/29/2013</dateSaved>
+        </guitarType>
+        <guitarType>
+                <brand>Schecter</brand>
+                <type>Electric</type>
+                <model>Stiletto Extreme-4</model>
+                <strings>4 String Bass</strings>
+                <pickups>EMG</pickups>
+                <finish>Black Cherry</finish>
+                <cost>$500.00</cost>
+                <rating>8</rating>
+                <dateSaved>11/10/2013</dateSaved>
+        </guitarType>
+    
+</guitarType>

@@ -6,11 +6,25 @@
 
 */
 
+.display {
+	background: url(../images/blackground.pbm);
+    background-position: center;
+    background-color: #000000;
+    background-repeat: repeat;
+    color: #ff9933;
+	font-size: 10px;
+	text-shadow: -1px 0px #000000;
+	
+}
 
 #photos .ui-grid .ui-bar-c{
 	margin: 2px 3px;
 	padding: 0em 0em;
 	text-align: center;
+}
+
+.logo{
+	margin: 0em 0.5em;
 }
 
 .ccl {
@@ -38,13 +52,6 @@
 	padding: 0.5em;
 }
 
-.back2 {
-	background-color: #000000;
-	background:url(bassback.jpg);
-	background-size:100% 100%;
-	background-repeat:no-repeat;
-}
-
 .back {
 	color: #ff9933;
 	text-shadow: -1px 1px #000000;
@@ -68,17 +75,17 @@
 }
 
 .ui-mobile-viewport {
-	background: url(../images/bassback.jpg);
+	background: url(../images/blackground.pbm);
     background-position: center;
     background-color: #000000;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 .ui-page.ui-body-c{
-    background: url(../images/bassBack.jpg);
+    background: url(../images/blackground.pbm);
     background-position: center;
     background-color: #000000;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 #about .ui-content {

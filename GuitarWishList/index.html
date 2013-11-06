@@ -27,8 +27,8 @@
 	<!-- HOME PAGE BEGINS -->
 	<div data-role="page" id="home">
 	
-	<!-- Logo -->
-	<a href="#addGuitar"><img src="images/logo4.jpg"></a>
+	<!-- Logo -->	
+	<a href="#addGuitar"><span class="logo"><img src="images/logo4.jpg"></span></a>
 		
 		<!-- Search Begins Here -->
         <div data-role="header" data-position="fixed" data-theme="a"></div>
@@ -132,16 +132,19 @@
     <div data-role="page" id="addGuitar">
     
     
-    <!-- Logo -->  
-    <a href="#home"><img src="images/logo3.jpg"></a>
+    <!-- Logo -->
+    <a href="#home"><span class="logo"><img src="images/logo3.jpg"></span></a>
     	
     	            
     <!-- Guitar Add List -->
     <div data-role="header" data-theme="b"><span class="head">ADD Guitar</span></div>                   
     <div><br/>
         <nav><span class="lab">
-             <a href="#" id="displayData"><span class="ccl">Display Information</span></a>
-             <a href="#addGuitar" id="addNew" style="display:none;">Add Another Guitar</a>
+             <a href="#" id="displayData" name="displayData"><span class="ccl">Show List Info.</span></a>
+             <a href="#" id="json" name="json"><span class="ccl">Display JSON</span></a>
+             <a href="#" id="xml" name="xml"><span class="ccl">Display XML</span></a>
+             <a href="#addGuitar" id="addNew" name="addNew" style="display:none;">Add Another Guitar</a>
+             <input id="key" type="hidden" value="" />
         </span></nav>
     </div><br/>
                         
@@ -167,13 +170,14 @@
             </div>
             
             <div data-role="fieldcontain">
-                <fieldset data-role="controlgroup">
-                    <legend><span class="label"><strong>Type of Guitar</strong><span class="rqd"><strong>*</strong></span></span></legend>
-                        <input type="radio" value="Electric" name="guitarType" id="guitarType-1" class="required" />
-                        <label for="guitarType-1"><small>Electric</small></label>
-                        <input type="radio" value="Acoustic" name="guitarType" id="guitarType-2" />
-                        <label for="guitarType-2"><small>Acoustic</small></label>
-                </fieldset>
+                <label for="guitarType"><span class="label"><strong>Type of Guitar&nbsp</strong><span class="rqd"><strong>*</strong></span></span></label>
+                    <select name="guitarType" id="guitarType" data-native-menu="false" class="required">
+                        <option value="select"><-- Select An Option --></option>
+                        <option value="Electric">Electric</option>
+                        <option value="Electric Bass">Electric Bass</option>
+                        <option value="Acoustic">Acoustic</option>
+                        <option value="Electric Acoustic">Electric Acoustic</option>
+                    </select><br/>
             </div>
             
             <div data-role="fieldcontain">
@@ -195,17 +199,14 @@
             </div>
             
             <div data-role="fieldcontain">
-                <fieldset data-role="controlgroup">
-                    <lengend><span class="label"><strong>Pickups</strong><span class="rqd"><strong>*</strong></span></span></legend><br/>
-                    	<label class="ccl">Choose:</label>
-                        <input type="checkbox" value="EMG" name="pickupType" id="pickupType-1" class="required" />
-                        <label for="pickupType-1"><small>EMG</small></label>
-                        <input type="checkbox" value="Factory" name="pickupType" id="pickupType-2" />
-                        <label for="pickupType-2"><small>Factory</small></label>
-                    	<input type="checkbox" value="Other" name="pickupType" id="pickupType-3" />
-                        <label for="pickupType-3"><small>Other</small></label>
-                </fieldset>
-            </div><br/>
+                <label for="pickupType"><span class="label"><strong>Type of Pickups&nbsp</strong><span class="rqd"><strong>*</strong></span></span></label>
+                    <select name="pickupType" id="pickupType" data-native-menu="false" class="required">
+                        <option value="select"><-- Select An Option --></option>
+                        <option value="EMG">EMG</option>
+                        <option value="Factory">Factory</option>
+                        <option value="Other">Other</option>
+                    </select><br/>
+            </div>
             
             <div data-role="fieldcontain">
                 <label for="finish"><span class="label"><strong>Finish&nbsp</strong><span class="rqd"><strong>*</strong></span></span></label>
@@ -221,8 +222,12 @@
                 <label for=rate"><span class="label"><strong>Rating</strong></span></label><br/><br/>
                 <input type="range" name="rate" id="rate" value="5" min="0" max="10" class="required" /><br/>
             </div><br/>
-                                        
-                                        
+            
+            <div data-role="fieldcontain">
+                <label for="comments"><span class="label"><strong>Comments</strong></span></label>
+                <textarea id="comments" name="comments"></textarea><br/>
+            </div>
+                            
             <div data-role="fieldcontain">        
                 <label><span class="label"><strong>Date Saved To List.</strong></span></label><br/>                                        
                 <label><span class="ccl">Choose Date:<span class="rqd"><strong>*</strong></span></span></label><br/>
@@ -230,10 +235,10 @@
             </div>
             
                                       
-            <input type="submit" value="Update List" data-inline="true" data-mini="true" data-icon="check" data-theme="b" />&nbsp&nbsp | &nbsp<a href="#" id="clearData"><span class="ccl">Delete List</span></a><br/><br/>
+            <input type="submit" value="Update List" data-inline="true" data-mini="true" data-icon="check" data-theme="b" />&nbsp&nbsp | &nbsp<a href="#" id="clearData" name="clearData"><span class="ccl">Delete List</span></a><br/><br/>
             
-            <div id="edit-item-button" style="display: none;">
-                <input type="button" id="edit-item" value="Edit Item" />
+            <div id="edit-item-button" name="edit-item-button" style="display: none;">
+                <input type="button" id="edit-item" name="edit-item" value="Edit Item" />
             </div>
             
             <a href="#addGuitarerrors" id="addGuitarerrorslink" data-rel="dialog" data-transition="pop">Open Errors</a>
@@ -277,7 +282,33 @@
     	</div>
     </div>
         
-    <!-- Error Dialog Page ENDS Here -->    
+    <!-- Error Dialog Page ENDS Here -->
+    
+    
+    <!-- Dispaly Page Begins Here --> 
+    <div data-role="dialog" id="display">
+    
+    	<div data-role="header" data-position="fixed" data-theme="b">
+    		<h1>Saved List</h1>
+    	</div>
+    	
+    	<div data-role="content" id="jsonDisplay">
+    		<ul data-role="listview" data-theme="b">
+    			<li>
+    			</li>
+    		</ul>
+    	</div><br/>
+    		
+    	<div data-role="content" id="xmlDisplay">
+            <ul data-role="listview" data-theme="b">
+                <li>
+                </li>                   
+            </ul>
+        </div><br/>
+    	<a href="#addGuitar" data-role="button" data-inline="true" data-mini="true" data-icon="arrow-l" data-theme="b">Back</a>
+    </div>
+        
+    <!-- Display Page ENDS Here -->    
 	
 	
 	
@@ -291,7 +322,7 @@
 	<div data-role="header" data-id="header" data-fullscreen="true" data-theme="b">
 		<h1>Video Lessons</h1>
 		<a href="#home" data-theme="a" data-transition="flip" data-icon="home" data-iconpos="notext">Home</a>
-	</div><br/>
+	</div>
 	<!-- Header ENDS -->
 		
 		<!-- Content Begins Here -->
@@ -305,7 +336,7 @@
 					<img src="images/strat150.jpg" alt="" class="videos" />
 					<h2>Guitar Lessons</h2>
 					<p>Learn how to be a rock star.</p><br/>
-					<ul data-role="listview" data-filter="true"><br/>					
+					<ul data-role="listview" data-filter="true">					
 						<li data-role="list-divider" class="divider">Video Lessons</li>
 						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=VQKU9WJG7BY">
 							<h2>How To Play Crazy Train</h2>
@@ -377,10 +408,10 @@
 						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=R1ylPgcyW-A">
 							<h2>Metal for Life w/Metal Mike</h2>
 							<p>Mega-Metal Licks in the Style of Metallica,</p>
-							<p>Testament and Pantera</p></a></li><br/>
-						<a href="#videos" data-role="button" data-theme="b" data-inline="true" data-transition="flip" data-icon="back"><span class="back">Back</span></a>
+							<p>Testament and Pantera</p></a></li>
+						<a href="#videos" data-role="button" data-theme="b" data-transition="flip" data-icon="back"><span class="back">Back</span></a>
 					</ul>
-				</li><br/>
+				</li>
 
 				<!-- Guitar Nested List Views END Here. -->
 				
@@ -392,9 +423,9 @@
 					<p>Guitar Supplies</p><br/>
 					<ul data-role="listview" data-filter="true">
 						
-						<a href="#videos" data-role="button" data-theme="b" data-inline="true" data-transition="flip" data-icon="back"><span class="back">Back</span></a>
+						<a href="#videos" data-role="button" data-theme="b" data-transition="flip" data-icon="back"><span class="back">Back</span></a>
 					</ul>
-				</li><br/>
+				</li>
 				<!-- Get Tuned Nested List Views END Here. -->
 				
 				
@@ -403,7 +434,7 @@
 					<img src="images/goldKnobs.jpg" alt="" class="videos" />
 					<h2>Misc. Videos</h2>
 					<p>With practice, this could be you.</p><br/>
-					<ul data-role="listview" data-filter="true"><br/>
+					<ul data-role="listview" data-filter="true">
 						<li data-role="list-divider" class="divider">Misc. Videos</li>
 						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=hp7_RyyEPjk">
 							<h2>Godspeed Hellbound</h2>
@@ -440,9 +471,9 @@
 							<h2>Megadeath's - Hanger 18</h2>
 							<p>by CorruptorMusics</p></a></li>
 						<li data-icon="forward"><a href="https://www.youtube.com/watch?v=YegApdf2j4g">Drummer - Meytall</a></li>
-						<a href="#videos" data-role="button" data-theme="b" data-inline="true" data-transition="flip" data-icon="back"><span class="back">Back</span></a>
+						<a href="#videos" data-role="button" data-theme="b" data-transition="flip" data-icon="back"><span class="back">Back</span></a>
 					</ul>
-				</li><br/>
+				</li>
 				<!-- MISC. Nested List Views END Here. -->
 
 			</ul>
@@ -479,7 +510,7 @@
 		<div data-role="header" data-id="header" data-theme="b">
 			<h1>Guitar Photos</h1>
 			<a href="#home" data-theme="a" data-transition="flip" data-icon="home" data-iconpos="notext">Home</a>
-		</div><br/>
+		</div>
 		<!-- Header ENDS -->
 		
 		<!-- Content Begins -->
@@ -519,7 +550,7 @@
 		<div data-role="header" data-id="header" data-fullscreen="true" data-theme="b">
 			<h1>About</h1>
 			<a href="#home" data-theme="a" data-transition="flip" data-icon="home" data-iconpos="notext">Home</a>
-		</div><br/><br/>
+		</div>
 		<!-- Header ENDS -->
 		
 		<!-- Content Begins -->
@@ -557,8 +588,8 @@
             <div data-role="collapsible" data-collapsed="true" data-iconpos="right">
                 <h3><span class="brw">gh-pages</span></h3>
                 <ul data-role="listview"><br/>
-                    <p><a href="https://github.com/g27259/ASD/tree/gh-pages">Repository</a></p><br/>
-                    <p><a href="http://g27259.github.io/ASD/GuitarWishList/index.html">Live Link</a></p><br/>
+                    <p><a href="https://github.com/g27259/ASD/tree/gh-pages">Repository</a></p>
+                    <p><a href="http://g27259.github.io/ASD/GuitarWishList/index.html">Live Link</a></p>
                 </ul>
             </div>
 				
