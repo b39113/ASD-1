@@ -113,7 +113,7 @@ $('#addGuitar').on('pageinit', function(){
     	var iconLi = document.createElement('li');
     	for (var n in imgName){
     		var newImg = document.createElement('img');
-    		var setSrc = newImg.setAttribute("src", "images/ " + imgName[n] + ".png");
+    		var setSrc = newImg.setAttribute("src", "images/" + imgName[n] + ".png");
     		iconLi.appendChild(newImg);
     	}
     	makeSubList.appendChild(iconLi);
@@ -153,6 +153,19 @@ $('#addGuitar').on('pageinit', function(){
     	deleteLink.on("click", deleteItem);
     	deleteLink.innerHTML = deleteText;
     	linksLi.appendChild(deleteLink);
+    }
+    
+    
+    //Delete single item function
+	function deleteItem(){
+    	var ask = confirm("Are you sure you want to delete this guitar?");
+    	if(ask){
+    		localStorage.removeItem(this.key);
+    		alert("That guitar has been deleted!");
+    		window.location.reload();
+    	}else{
+    		alert("This guitar was NOT deleted and will remain in your list.");
+    	}
     }
     
     
@@ -223,18 +236,6 @@ $(function(){
 	});
 });
 */
-
-	//Delete single item function
-	function deleteItem(){
-    	var ask = confirm("Are you sure you want to delete this guitar?");
-    	if(ask){
-    		localStorage.removeItem(this.key);
-    		alert("That guitar has been deleted!");
-    		window.location.reload();
-    	}else{
-    		alert("This guitar was NOT deleted and will remain in your list.");
-    	}
-    }
     
     
     //This clears all of the data.
@@ -259,6 +260,7 @@ $(function(){
     clearData.on("click", clearLocal);
     var displayData = $('#displayData');
     displayData.on("click", getData);
+
     
     
 	
