@@ -68,6 +68,7 @@ $('#addGuitar').on('pageinit', function(){
     	alert("Guitar Saved. Your List has been updated.");
      
 		}
+				
 		
 		//This gets the data from local storage.
 		function getData(){
@@ -234,17 +235,21 @@ $(function(){
     		alert("This guitar was NOT deleted and will remain in your list.");
     	}
     }
-
-
-	//This clears all of the data.
+    
+    
+    //This clears all of the data.
     function clearLocal(){
         if(localStorage.length === 0){
             alert("There aren't any guitars in your list at this time.");
         }else{
-            localStorage.clear();
-            alert("Your list has been deleted.");
-            window.location.reload();
-            return false;
+        	var ask = confirm("Are you sure you want to delete your entire list?");
+        	if(ask){
+            	localStorage.clear();
+            	alert("Your entire list has been deleted.");
+            	window.location.reload();
+            }else{
+    			alert("Your list was NOT deleted and will remain intact.");
+    		}
         }
     }
 
@@ -261,9 +266,6 @@ $(function(){
 
 
 	//The functions below can go inside or outside the pageinit function for the page in which it is needed.
-	
-	
-
 	
 
 	

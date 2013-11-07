@@ -9,8 +9,8 @@
 .display {
 	background: url(../images/blackground.pbm);
     background-position: center;
+    background-repeat: repeat; 
     background-color: #000000;
-    background-repeat: repeat;
     color: #ff9933;
 	font-size: 10px;
 	text-shadow: -1px 0px #000000;
