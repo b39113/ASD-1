@@ -68,6 +68,93 @@ $('#addGuitar').on('pageinit', function(){
     	alert("Guitar Saved. Your List has been updated.");
      
 		}
+		
+		//This gets the data from local storage.
+		function getData(){
+        toggleControls("on");
+        if(localStorage.length === 0){
+            alert("There aren't any guitars in your list at this time so JSON data was added.");
+            jsonData();
+        }
+        //This writes the data from the local storage to the browser.
+        var makeDiv = document.createElement('div');   	       //Creates div
+        makeDiv.setAttribute("id", "items");                   //Sets ID
+        var makeList = document.createElement('ul');   	       //Creates a list.
+        makeDiv.appendChild(makeList);                     	   //Adds the list to div.
+        document.body.appendChild(makeDiv);                	   //Adds div to the body.
+        $('items').style.display = "block";            		   //This makes sure the items display when data is retrieved.
+        for (var i=0, len=localStorage.length; i<len; i++){
+            var makeli = document.createElement('li');
+            var linksLi = document.createElement('li');
+            makeList.appendChild(makeli);
+            var key = localStorage.key(i);
+            var value = localStorage.getItem(key);
+            
+            //This converts string from local storage back into an object using JSON.parse()
+            var obj = JSON.parse(value);
+            var makeSubList = document.createElement('ul');  	//This creates a sub ul.
+            makeli.appendChild(makeSubList);
+            var appType = obj.appointmentType[1];
+            getImage(appType, makeSubList);
+            for(var n in obj){
+               var makeSubli = document.createElement('li');
+               makeSubList.appendChild(makeSubli);
+               var optSubText = obj[n][0]+" "+obj[n][1];
+               makeSubli.innerHTML = optSubText;
+               makeSubList.appendChild(linksLi);
+            }
+            makeItemLinks(localStorage.key(i), linksLi);  //This will make the edit and delete buttons/links for each item in local storage.
+        }
+    }
+    
+    //This gets the correct image for the Appointment Type(s) that have been checked.
+    function getImage(imgName, makeSubList){
+    	var iconLi = document.createElement('li');
+    	for (var n in imgName){
+    		var newImg = document.createElement('img');
+    		var setSrc = newImg.setAttribute("src", "images/ " + imgName[n] + ".png");
+    		iconLi.appendChild(newImg);
+    	}
+    	makeSubList.appendChild(iconLi);
+    }
+    
+   //This Auto Populates the Local Storage with JSON Data for TESTING Purposes.
+    function jsonData(){
+    	//The actual JSON OBJECT data required for this function to work is coming from our json.js file, which is loaded from our HTML page.
+    	//Now store the JSON OBJECT into Local Storage.
+    	for(var n in json){
+    		var id = Math.floor(Math.random()*100000001);
+    		localStorage.setItem(id, JSON.stringify(json[n]));
+    	}
+    }
+    
+    //Make Item Links
+    //This creates the edit and delete links for each stored item when displayed.
+    function makeItemLinks(key, linksLi){
+    	//add edit single item link
+    	var editLink  = document.createElement('a');
+    	editLink.href = "#";
+    	editLink.key  = key;
+    	var editText  = "Edit This Guitar";
+    	editLink.addEventListener("click", editItem);
+    	editLink.innerHTML = editText;
+    	linksLi.appendChild(editLink);
+    	
+    	//This adds a line break.
+    	var breakTag = document.createElement('br');
+    	linksLi.appendChild(breakTag);
+    	
+    	//This adds a delete single item link.
+    	var deleteLink  = document.createElement('a');
+    	deleteLink.href = "#";
+    	deleteLink.key  = key;
+    	var deleteText  = "Delete This Guitar";
+    	deleteLink.addEventListener("click", deleteItem);
+    	deleteLink.innerHTML = deleteText;
+    	linksLi.appendChild(deleteLink);
+    }
+    
+    
 
 /*
 //(ERROR) - This gives back an error of "Uncaught SyntaxError: Unexpected identifier 	main.js:85"
@@ -79,12 +166,14 @@ $('#json').on('click', function(){
 		dataType	: "json",
 		success		: function(data, status) {
 			console.log(data, status);
+			var serializedItem = JSON.stringify(item);  
+				console.log(serializedItem).appendTo('#jsonDisplay');
 		},
 		error		: function(error, parseerror){
 			console.log(error, parseerror);
+			
 		}
-		var serializedItem = JSON.stringify(item);  
-		console.log(serializedItem).appendTo('#jsonDisplay');  
+		  
 	});
 
 })
@@ -134,17 +223,6 @@ $(function(){
 });
 */
 
-/*  //(ERROR) - OPTIONS file:///Users/Mark/Desktop/ASD/GuitarWishList/data.json  jquery.js:5446
-$.ajax({
-	url			: "data.json",
-	type		: "GET",
-	dataType	:"json",
-	success		: function(data, status) {
-		console.log(status, data);
-	}
-});
-*/
-
 
 	//This clears all of the data.
     function clearLocal(){
@@ -163,7 +241,7 @@ $.ajax({
     var clearData = $('#clearData');
     clearData.on("click", clearLocal);
     var displayData = $('#displayData');
-    displayData.on("click");
+    displayData.on("click", getData);
     
     
 	
