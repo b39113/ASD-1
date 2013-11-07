@@ -223,6 +223,18 @@ $(function(){
 });
 */
 
+	//Delete single item function
+	function deleteItem(){
+    	var ask = confirm("Are you sure you want to delete this guitar?");
+    	if(ask){
+    		localStorage.removeItem(this.key);
+    		alert("That guitar has been deleted!");
+    		window.location.reload();
+    	}else{
+    		alert("This guitar was NOT deleted and will remain in your list.");
+    	}
+    }
+
 
 	//This clears all of the data.
     function clearLocal(){
