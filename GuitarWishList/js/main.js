@@ -136,7 +136,7 @@ $('#addGuitar').on('pageinit', function(){
     	editLink.href = "#";
     	editLink.key  = key;
     	var editText  = "Edit This Guitar";
-    	editLink.addEventListener("click", editItem);
+    	editLink.on("click", editItem);
     	editLink.innerHTML = editText;
     	linksLi.appendChild(editLink);
     	
@@ -149,7 +149,7 @@ $('#addGuitar').on('pageinit', function(){
     	deleteLink.href = "#";
     	deleteLink.key  = key;
     	var deleteText  = "Delete This Guitar";
-    	deleteLink.addEventListener("click", deleteItem);
+    	deleteLink.on("click", deleteItem);
     	deleteLink.innerHTML = deleteText;
     	linksLi.appendChild(deleteLink);
     }
