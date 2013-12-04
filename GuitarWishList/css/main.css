@@ -34,6 +34,11 @@
 	padding: 1em;
 }
 
+.ccl2 {
+	color: #ff9933;	
+	text-shadow: -1px 1px #000000;
+}
+
 .rqd {
     color: #FF0000;
     text-shadow: 0px 1px #000000;
@@ -88,13 +93,13 @@
     background-repeat: repeat;
 }
 
-#about .ui-content {
+#info .ui-content {
 	color: #ff9933;
 	text-shadow: -1px 0px #000000;
 	padding: 1em;
 }
 
-#about .ui-li-desc {
+#info .ui-li-desc {
 	color: #ff9933;
 	text-shadow: -1px 0px #000000;
 	padding: 12px;
@@ -131,7 +136,44 @@
 	text-shadow: -1px 1px #000000;
 }
 
-#editItem { 
-	display: none; 
+#displayGuitars .ui-listview{
+	color: #ff9933;
+	text-shadow: -1px 1px #000000;
 }
 
+.editLink {
+	color: #cccccc;
+}
+
+.deleteLink {
+	color: #cccccc;
+}
+
+.ui-icon-tweet-logo {
+	background-image: url("../images/orangeTweet.png");
+}
+
+.ui-icon-photo-icon {
+	background-image: url("../images/photoIcon.png");
+}
+
+.ui-icon-video-icon {
+	background-image: url("../images/videoIcon.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-tweet-logo {
+		background-image: url("../images/orangeTweet.png");
+		background-size: 18px 18px;
+	}
+
+	.ui-icon-photo-icon {
+		background-image: url("../images/photoIcon_hr.png");
+		background-size: 18px 18px;
+	}
+
+	.ui-icon-video-icon {
+		background-image: url("../images/videoIcon_hr.png");
+		background-size: 18px 18px;
+	}
+}
