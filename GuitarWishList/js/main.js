@@ -146,18 +146,21 @@ $('#index').on('pageinit', function(){
 
 };
     
-    
+       
 
 //Get ajax JSON data
 $('#displayGuitars').on('pageinit', function(){
    
         $("#jsonbtn").on("click", function(){
                 console.log("JSON button clicked!");
-            $.ajax({
-                url: "..xhr/data.json",
+           /*$('#guitarDisplay').empty();*/
+           $.ajax({
+                url: "xhr/data.json",
+                data:{},
                 type: "GET",
-                dataType: "json",
-                success: function(data, status){
+                dataType: "jsonp",
+                success: function(response){
+                	console.log(data, status);
                     for(var i=0, j=data.item.length; i<j; i++){
                         var jsonDisplay = data.item[i];
                         $(''+
@@ -176,34 +179,59 @@ $('#displayGuitars').on('pageinit', function(){
                                 '</ul>' +
                             '</div>'
                         ).appendTo("#guitarDisplay");
-                    };
+                    }; 
                 }
-            });
+            });  
         });
 });
 
 
+
+
+
+
+
+
 /*
-//(ERROR) - This gives back an error of "Uncaught SyntaxError: Unexpected token ; 	main.js:178"
 //XML Data
-$('#xml').on('click', function(){
-    $.ajax({
-        url: 	  'xhr/data.xml',
-        type: 	  'GET',
-        dataType: 'xml',
-        success: function(xml){
-        var data  = $.parseXML(xml);
-        var items = $(data);
-        items.find("item").each(function(){
-        	var item = $(this);
-        	console.log("Brand:", item.find("brand")).appendTo('#xmlDisplay');
-                
+$('#displayGuitars').on('pageinit', function(){
+   
+        $("#xmlbtn").on("click", function(){
+                console.log("XML button clicked!");
+           $.ajax({
+                url: "../xhr/data.xml",
+                type: "GET",
+                dataType: "json",
+                success: function(data){
+                	console.log(data);
+                    for(var i=0, j=data.item.length; i<j; i++){
+                        var jsonDisplay = data.item[i];
+                        $(''+
+                            '<div>' +
+                                '<ul>' +
+                                  '<li>' + jsonDisplay.brand 		+ '</li>' +
+                                  '<li>' + jsonDisplay.guitarType 	+ '</li>' +
+                                  '<li>' + jsonDisplay.model 		+ '</li>' +
+                                  '<li>' + jsonDisplay.strings 		+ '</li>' +
+                                  '<li>' + jsonDisplay.pickupType 	+ '</li>' +
+                                  '<li>' + jsonDisplay.finish 		+ '</li>' +
+                                  '<li>' + jsonDisplay.cost 		+ '</li>' +
+                                  '<li>' + jsonDisplay.rate 		+ '</li>' +
+                                  '<li>' + jsonDisplay.comments 	+ '</li>' +
+                                  '<li>' + jsonDisplay.date 		+ '</li>' +
+                                '</ul>' +
+                            '</div>'
+                        ).appendTo("#guitarDisplay");
+                    }; 
+                }
+            });  
+        });
 });
 */
 
 
-/*	//(ERROR) - OPTIONS file:///Users/Mark/Desktop/ASD/GuitarWishList/xhr/list.php Origin null is not allowed by Access-Control-Allow-Origin. jquery.js:5446
-	//(ERROR) -	XMLHttpRequest cannot load file:///Users/Mark/Desktop/ASD/GuitarWishList/xhr/list.php. Origin null is not allowed by Access-Control-Allow-Origin. index.html?brand=Gibson&guitarType=Electric&model=sdf&strings=6+String&pickupType=EMG&finish=sdf&co…:1
+
+/*	
 $(function(){
 
 	$('#phpDisplay').empty();
@@ -258,8 +286,6 @@ $(function(){
     }); 
     
     
-     
- 
     var displayData = $('#displayData');
     displayData.on("click", getData);
     
